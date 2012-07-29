@@ -2,7 +2,7 @@ class SessionsController < ApplicationController
 
   def login
     auth = request.env['omniauth.auth']
-    user = User.find_by_nickname(auth['user_info']['nickname']) || User.create_account(auth)
+    user = User.find_by_uid(auth['info']['uid']) || User.create_account(auth)
    
     session[:user_id] = user.id
     logger.debug auth.to_yaml
