@@ -1,3 +1,4 @@
+
 class SessionsController < ApplicationController
 
   def login
@@ -6,11 +7,11 @@ class SessionsController < ApplicationController
    
     session[:user_id] = user.id
     logger.debug auth.to_yaml
-    redirect_to root_url, :notice => 'ログインしました。'
+    redirect_to root_url
   end
   
   def logout
     session[:user_id] = nil
-    redirect_to root_url, :notice => 'ログアウトしました。'
+    redirect_to root_url 
   end
 end
