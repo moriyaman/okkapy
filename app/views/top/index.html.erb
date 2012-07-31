@@ -1,6 +1,7 @@
 <h1>Top#index</h1>
 <% if current_user %>
-  ようこそ、<%= current_user.nickname %>さん。 | <%= link_to 'logout', logout_path %>
+  ようこそ、<%= current_user.last_name %>さん。 | <%= link_to 'logout', logout_path %>
+<%= current_user.image_url %>
 <% else %>
   <%= link_to 'Facebookでログイン', 'auth/facebook' %>
 <% end %>

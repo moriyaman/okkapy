@@ -39,8 +39,8 @@ gem 'jquery-rails'
 # gem 'capistrano'
 
 # To use debugger
-# gem 'ruby-debug'
+ gem 'ruby-debug'
 
 gem "twitter-bootstrap-rails"
 gem 'omniauth'
-gem 'omniauth-facebook'
+gem 'omniauth-facebook', '1.4.0'
