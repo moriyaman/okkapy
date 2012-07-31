@@ -10,4 +10,7 @@ class User < ActiveRecord::Base
     user.image_url = auth['info']['image']
     user.save!
   end
+
+  def test_test
+  end
 end
