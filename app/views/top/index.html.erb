@@ -1,9 +1,16 @@
 <h1>Top#index</h1>
 <% if current_user %>
   ようこそ、<%= current_user.last_name %>さん。 | <%= link_to 'logout', logout_path %>
-<%= current_user.image_url %>
+  <img src=<%=current_user.image_url %> width="50" height="50" alt="" /><br />
 <% else %>
   <%= link_to 'Facebookでログイン', 'auth/facebook' %>
 <% end %>
 
-<p>Find me in app/views/top/index.html.erb</p>
+
+<% if current_user %>
+  ♫あなたのお友達写真一覧♫
+  <% @current_user_friends.each do |friend| %>
+    <img src=<%= friend.picture %> width="50" height="50" alt="" /><br />
+  <% end %>
+<% end %>
+

@@ -10,7 +10,45 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120727223326) do
+ActiveRecord::Schema.define(:version => 20120802121041) do
+
+  create_table "user_friends", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "friend_name"
+    t.integer  "friend_uid"
+    t.integer  "friend_id"
+    t.date     "friend_birthday"
+    t.string   "friend_picture"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
+
+  create_table "user_interests", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "name"
+    t.string   "category"
+    t.integer  "category_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "user_likes", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "name"
+    t.string   "category"
+    t.integer  "category_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "user_photos", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "height"
+    t.integer  "width"
+    t.string   "image_url"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "mail"
