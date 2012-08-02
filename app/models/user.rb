@@ -10,7 +10,6 @@ class User < ActiveRecord::Base
     user.access_token = auth['credentials']['token']
     user.uid = auth['uid']
     user.image_url = auth['info']['image']
-    debugger
     user.save!
   end
 
