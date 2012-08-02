@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
 
 
   def user_defined
-    session[:user_id] ? @user = User.find_by_uid(session[:user_id]) : @user=nil
+    session[:user_id] ? @user = User.find(session[:user_id]) : @user=nil
   end
 
   def user_friend_defined

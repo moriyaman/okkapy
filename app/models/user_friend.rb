@@ -5,14 +5,12 @@ class UserFriend < ActiveRecord::Base
   
   belongs_to :user
   
-  validates :friend_uid, :uniqueness => true
-
   class << self
  
     def get_user_friend_date(user)
       @friends = JSON.parse URI("https://graph.facebook.com/me/friends?fields=name,id,birthday,picture&access_token=#{user.access_token}").read
       @friends['data'].each do |friend|
-        @user_friend = UserFriend.new(:user_id => user.id, :friend_uid => friend['id'], :friend_name => friend['name'], :friend_picture => friend['picture']) 
+        @user_friend = UserFriend.new(:user_id => user.id, :friend_uid => friend['id'], :friend_name => friend['name'], :friend_picture => friend['picture']['data']['url']) 
         if friend['birthday']
           m = friend['birthday'].slice(0..1).to_i
           d = friend['birthday'].slice(3..4).to_i

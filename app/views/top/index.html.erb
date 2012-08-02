@@ -10,8 +10,8 @@
 
 <% if current_user %>
   ♫あなたのお友達写真一覧♫
-  <% @friends.each do |friend| %>
-    <img src=<%= friend.picture %> width="50" height="50" alt="" /><br />
+  <% current_user.user_friends.each do |friend| %>
+    <img src=<%= friend.friend_picture %> width="50" height="50" alt="" /><br />
   <% end %>
 <% end %>
 
