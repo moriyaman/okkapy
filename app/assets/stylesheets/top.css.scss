@@ -1,3 +1,553 @@
-// Place all the styles related to the top controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+
+dy {
+  margin: 0px;
+  padding: 0px;
+  background-color: #ffffff;
+  background-image: url(background.jpg);
+  background-repeat: repeat;
+  background-position: top left;
+}
+#page-wrapper {
+  position: relative;
+  width: 960px;
+  /* centers the document */
+  margin: 0 auto;
+  /*
+  hides anything drawn off canvas.
+  remove overflow and height to see things drawn off canvas.
+  */
+  overflow: hidden;
+  height: 1450px;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+.textarea {
+  color: #000000;
+  font-family:"Arial";
+  font-size: 12pt;
+  font-weight: normal;
+  font-style: normal;
+  text-align: left;
+  line-height: 1.2;
+  width: 20px;
+  position: absolute;
+  top: 0px;
+  left: 480px;
+  margin: 0;
+}
+.oval {
+  background: #fafcff;
+  background-image: -moz-linear-gradient(270deg, #fafcff 0%, #d7d9db 100%);
+  background-image: -webkit-linear-gradient(270deg, #fafcff 0%, #d7d9db 100%);
+  background-image: -o-linear-gradient(270deg, #fafcff 0%, #d7d9db 100%);
+  background-image: linear-gradient(270deg, #fafcff 0%, #d7d9db 100%);
+  border: none;
+  width: 50px;
+  height: 50px;
+  -moz-box-shadow: 0px 1px 2px 0px #8a8a8a, inset 0px 0px 3px 0px #fafcff;
+  -webkit-box-shadow: 0px 1px 2px 0px #8a8a8a, inset 0px 0px 3px 0px #fafcff;
+  -o-box-shadow: 0px 1px 2px 0px #8a8a8a, inset 0px 0px 3px 0px #fafcff;
+  box-shadow: 0px 1px 2px 0px #8a8a8a, inset 0px 0px 3px 0px #fafcff;
+  position: absolute;
+  top: 70px;
+  left: 30px;
+  border-radius: 25px / 25px;
+}
+.text {
+  color: #333333;
+  font-family:"lobster";
+  font-size: 20pt;
+  font-weight: normal;
+  font-style: normal;
+  text-align: center;
+  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.7);
+  line-height: 50px;
+  ;
+}
+.rectangle {
+  background: #f1f3f5;
+  border: 1px solid #dfe1e3;
+  width: 380px;
+  height: 193px;
+  border-radius: 5px;
+  position: absolute;
+  top: 85px;
+  left: 489px;
+}
+.textarea-1 {
+  color: #474747;
+  font-family:"helvetica neue";
+  font-size: 12pt;
+  font-weight: 300;
+  font-style: normal;
+  text-align: left;
+  line-height: 1.6;
+  width: 300px;
+  margin: 21px 0 0 44px;
+  position: relative;
+}
+.path {
+  background: #222222;
+  border: none;
+  width: 7px;
+  height: 14px;
+  position: absolute;
+  top: 0px;
+  left: 91px;
+}
+.path-1 {
+  background: #222222;
+  border: none;
+  width: 7px;
+  height: 14px;
+  position: absolute;
+  top: 0px;
+  left: 83px;
+}
+.textarea-2 {
+  color: #ffffff;
+  font-family:"raleway";
+  font-size: 30pt;
+  font-weight: Normal;
+  font-style: normal;
+  text-align: center;
+  line-height: 1.2;
+  width: 620px;
+  position: absolute;
+  top: 103px;
+  left: 194px;
+  margin: 0;
+}
+.text-1 {
+  color: #333333;
+  font-family:"helvetica";
+  font-size: 23pt;
+  font-weight: 300;
+  font-style: normal;
+  text-align: left;
+  position: absolute;
+  top: 80px;
+  left: 99px;
+}
+.rectangle-1 {
+  background: #4453ad;
+  border: 1px solid #151e33;
+  width: 302px;
+  height: 42px;
+  border-radius: 5px;
+  -moz-box-shadow: inset 0px 0px 30px 0px #6f8bb5, 0px 8px 0px 0px #1f3053, 0px 10px 5px 0px #000000;
+  -webkit-box-shadow: inset 0px 0px 30px 0px #6f8bb5, 0px 8px 0px 0px #1f3053, 0px 10px 5px 0px #000000;
+  -o-box-shadow: inset 0px 0px 30px 0px #6f8bb5, 0px 8px 0px 0px #1f3053, 0px 10px 5px 0px #000000;
+  box-shadow: inset 0px 0px 30px 0px #6f8bb5, 0px 8px 0px 0px #1f3053, 0px 10px 5px 0px #000000;
+  position: absolute;
+  top: 198px;
+  left: 88px;
+}
+.text-2 {
+  color: #ffffff;
+  font-family:"lobster";
+  font-size: 16pt;
+  font-weight: normal;
+  font-style: normal;
+  text-align: center;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.7);
+  line-height: 42px;
+  ;
+}
+.text-3 {
+  color: #ffffff;
+  font-family:"lobster";
+  font-size: 18pt;
+  font-weight: normal;
+  font-style: normal;
+  text-align: left;
+  text-shadow: 0px 0px 3px rgba(255, 255, 255, 0.5);
+  position: absolute;
+  top: 417px;
+  left: 59px;
+}
+.rectangle-2 {
+  background: #f1f3f5;
+  border: 1px solid #dfe1e3;
+  width: 1150px;
+  height: 411px;
+  border-radius: 0px;
+  -moz-box-shadow: inset 0px 1px 1px 0px rgba(255, 255, 255, 0.7);
+  -webkit-box-shadow: inset 0px 1px 1px 0px rgba(255, 255, 255, 0.7);
+  -o-box-shadow: inset 0px 1px 1px 0px rgba(255, 255, 255, 0.7);
+  box-shadow: inset 0px 1px 1px 0px rgba(255, 255, 255, 0.7);
+  position: absolute;
+  top: 469px;
+  left: -200px;
+}
+.rectangle-3 {
+  background: #fafcff;
+  border: 1px solid #dfe1e3;
+  width: 380px;
+  height: 311px;
+  border-radius: 5px;
+  position: absolute;
+  top: 44px;
+  left: 185px;
+}
+.oval-1 {
+  background: #fafcff;
+  background-image: -moz-linear-gradient(270deg, #fafcff 0%, #d7d9db 100%);
+  background-image: -webkit-linear-gradient(270deg, #fafcff 0%, #d7d9db 100%);
+  background-image: -o-linear-gradient(270deg, #fafcff 0%, #d7d9db 100%);
+  background-image: linear-gradient(270deg, #fafcff 0%, #d7d9db 100%);
+  border: none;
+  width: 50px;
+  height: 50px;
+  -moz-box-shadow: 0px 1px 2px 0px #8a8a8a, inset 0px 0px 3px 0px #fafcff;
+  -webkit-box-shadow: 0px 1px 2px 0px #8a8a8a, inset 0px 0px 3px 0px #fafcff;
+  -o-box-shadow: 0px 1px 2px 0px #8a8a8a, inset 0px 0px 3px 0px #fafcff;
+  box-shadow: 0px 1px 2px 0px #8a8a8a, inset 0px 0px 3px 0px #fafcff;
+  position: absolute;
+  top: 21px;
+  left: 240px;
+  border-radius: 25px / 25px;
+}
+.text-4 {
+  color: #333333;
+  font-family:"lobster";
+  font-size: 20pt;
+  font-weight: normal;
+  font-style: normal;
+  text-align: center;
+  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.7);
+  line-height: 50px;
+  ;
+}
+.text-5 {
+  color: #333333;
+  font-family:"helvetica";
+  font-size: 23pt;
+  font-weight: 300;
+  font-style: normal;
+  text-align: left;
+  position: absolute;
+  top: 42px;
+  left: 313px;
+}
+.textarea-3 {
+  color: #4f4f4f;
+  font-family:"helvetica neue";
+  font-size: 12pt;
+  font-weight: 300;
+  font-style: normal;
+  text-align: left;
+  line-height: 1.6;
+  width: 419px;
+  position: absolute;
+  top: 102px;
+  left: 670px;
+  margin: 0;
+}
+.textarea-4 {
+  color: #000000;
+  font-family:"Arial";
+  font-size: 12pt;
+  font-weight: normal;
+  font-style: normal;
+  text-align: left;
+  line-height: 1.2;
+  width: 50px;
+  position: absolute;
+  top: 271px;
+  left: 560px;
+  margin: 0;
+}
+.image {
+  width: 260px;
+  height: 231px;
+  position: absolute;
+  top: 120px;
+  left: 330px;
+}
+.textarea-5 {
+  color: #474747;
+  font-family:"helvetica neue";
+  font-size: 12pt;
+  font-weight: 300;
+  font-style: normal;
+  text-align: left;
+  line-height: 1.6;
+  width: 300px;
+  position: absolute;
+  top: 331px;
+  left: 670px;
+  margin: 0;
+}
+.text-6 {
+  color: #333333;
+  font-family:"helvetica";
+  font-size: 23pt;
+  font-weight: 300;
+  font-style: normal;
+  text-align: left;
+  position: absolute;
+  top: 929px;
+  left: 51px;
+}
+.rectangle-4 {
+  background: #f1f3f5;
+  border: 1px solid #dfe1e3;
+  width: 380px;
+  height: 160px;
+  border-radius: 5px;
+  position: absolute;
+  top: 933px;
+  left: 530px;
+}
+.rectangle-5 {
+  background: #4453ad;
+  border: 1px solid #151e33;
+  width: 302px;
+  height: 42px;
+  border-radius: 5px;
+  -moz-box-shadow: inset 0px 0px 30px 0px #6f8bb5, 0px 8px 0px 0px #1f3053, 0px 10px 5px 0px #000000;
+  -webkit-box-shadow: inset 0px 0px 30px 0px #6f8bb5, 0px 8px 0px 0px #1f3053, 0px 10px 5px 0px #000000;
+  -o-box-shadow: inset 0px 0px 30px 0px #6f8bb5, 0px 8px 0px 0px #1f3053, 0px 10px 5px 0px #000000;
+  box-shadow: inset 0px 0px 30px 0px #6f8bb5, 0px 8px 0px 0px #1f3053, 0px 10px 5px 0px #000000;
+  position: absolute;
+  top: 20px;
+  left: 40px;
+}
+.text-7 {
+  color: #ffffff;
+  font-family:"lobster";
+  font-size: 16pt;
+  font-weight: normal;
+  font-style: normal;
+  text-align: center;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.7);
+  line-height: 42px;
+  ;
+}
+.textarea-6 {
+  color: #474747;
+  font-family:"helvetica neue";
+  font-size: 12pt;
+  font-weight: 300;
+  font-style: normal;
+  text-align: left;
+  line-height: 1.6;
+  width: 300px;
+  position: absolute;
+  top: 88px;
+  left: 41px;
+  margin: 0;
+}
+.rectangle-6 {
+  background: #2c2c2c;
+  background-image: -moz-linear-gradient(270deg, #2c2c2c 0%, #303030 100%);
+  background-image: -webkit-linear-gradient(270deg, #2c2c2c 0%, #303030 100%);
+  background-image: -o-linear-gradient(270deg, #2c2c2c 0%, #303030 100%);
+  background-image: linear-gradient(270deg, #2c2c2c 0%, #303030 100%);
+  border: none;
+  width: 50px;
+  height: 19px;
+  border-radius: 3px;
+  -moz-box-shadow: 0px 1px 0px 0px #0d0d0d, 0px 3px 0px 0px #262626, inset 0px -1px 2px 0px rgba(55, 55, 55, 0.7);
+  -webkit-box-shadow: 0px 1px 0px 0px #0d0d0d, 0px 3px 0px 0px #262626, inset 0px -1px 2px 0px rgba(55, 55, 55, 0.7);
+  -o-box-shadow: 0px 1px 0px 0px #0d0d0d, 0px 3px 0px 0px #262626, inset 0px -1px 2px 0px rgba(55, 55, 55, 0.7);
+  box-shadow: 0px 1px 0px 0px #0d0d0d, 0px 3px 0px 0px #262626, inset 0px -1px 2px 0px rgba(55, 55, 55, 0.7);
+  position: absolute;
+  top: 22px;
+  left: 94px;
+}
+.textarea-7 {
+  color: #ebebeb;
+  font-family:"helvetica";
+  font-size: 9pt;
+  font-weight: normal;
+  font-style: normal;
+  text-align: center;
+  line-height: 19px;
+  ;
+  text-shadow: 0px 1px 1px #1c1c1c;
+  margin: 0;
+}
+.rectangle-7 {
+  background: #2c2c2c;
+  background-image: -moz-linear-gradient(270deg, #2c2c2c 0%, #303030 100%);
+  background-image: -webkit-linear-gradient(270deg, #2c2c2c 0%, #303030 100%);
+  background-image: -o-linear-gradient(270deg, #2c2c2c 0%, #303030 100%);
+  background-image: linear-gradient(270deg, #2c2c2c 0%, #303030 100%);
+  border: none;
+  width: 28px;
+  height: 19px;
+  border-radius: 3px;
+  -moz-box-shadow: 0px 1px 0px 0px #0d0d0d, 0px 3px 0px 0px #262626, inset 0px -1px 2px 0px rgba(55, 55, 55, 0.7);
+  -webkit-box-shadow: 0px 1px 0px 0px #0d0d0d, 0px 3px 0px 0px #262626, inset 0px -1px 2px 0px rgba(55, 55, 55, 0.7);
+  -o-box-shadow: 0px 1px 0px 0px #0d0d0d, 0px 3px 0px 0px #262626, inset 0px -1px 2px 0px rgba(55, 55, 55, 0.7);
+  box-shadow: 0px 1px 0px 0px #0d0d0d, 0px 3px 0px 0px #262626, inset 0px -1px 2px 0px rgba(55, 55, 55, 0.7);
+  position: absolute;
+  top: 22px;
+  left: 146px;
+}
+.textarea-8 {
+  color: #ebebeb;
+  font-family:"helvetica";
+  font-size: 9pt;
+  font-weight: normal;
+  font-style: normal;
+  text-align: center;
+  line-height: 19px;
+  ;
+  text-shadow: 0px 1px 1px #1c1c1c;
+  margin: 0;
+}
+.rectangle-8 {
+  background: #2c2c2c;
+  background-image: -moz-linear-gradient(270deg, #2c2c2c 0%, #303030 100%);
+  background-image: -webkit-linear-gradient(270deg, #2c2c2c 0%, #303030 100%);
+  background-image: -o-linear-gradient(270deg, #2c2c2c 0%, #303030 100%);
+  background-image: linear-gradient(270deg, #2c2c2c 0%, #303030 100%);
+  border: none;
+  width: 28px;
+  height: 19px;
+  border-radius: 3px;
+  -moz-box-shadow: 0px 1px 0px 0px #0d0d0d, 0px 3px 0px 0px #262626, inset 0px -1px 2px 0px rgba(55, 55, 55, 0.7);
+  -webkit-box-shadow: 0px 1px 0px 0px #0d0d0d, 0px 3px 0px 0px #262626, inset 0px -1px 2px 0px rgba(55, 55, 55, 0.7);
+  -o-box-shadow: 0px 1px 0px 0px #0d0d0d, 0px 3px 0px 0px #262626, inset 0px -1px 2px 0px rgba(55, 55, 55, 0.7);
+  box-shadow: 0px 1px 0px 0px #0d0d0d, 0px 3px 0px 0px #262626, inset 0px -1px 2px 0px rgba(55, 55, 55, 0.7);
+  position: absolute;
+  top: 22px;
+  left: 64px;
+}
+.textarea-9 {
+  color: #ebebeb;
+  font-family:"helvetica";
+  font-size: 9pt;
+  font-weight: normal;
+  font-style: normal;
+  text-align: center;
+  line-height: 19px;
+  ;
+  text-shadow: 0px 1px 1px #1c1c1c;
+  margin: 0;
+}
+.oval-2 {
+  background: #fafcff;
+  background-image: -moz-linear-gradient(270deg, #fafcff 0%, #d7d9db 100%);
+  background-image: -webkit-linear-gradient(270deg, #fafcff 0%, #d7d9db 100%);
+  background-image: -o-linear-gradient(270deg, #fafcff 0%, #d7d9db 100%);
+  background-image: linear-gradient(270deg, #fafcff 0%, #d7d9db 100%);
+  border: none;
+  width: 50px;
+  height: 50px;
+  -moz-box-shadow: 0px 1px 2px 0px #8a8a8a, inset 0px 0px 3px 0px #fafcff;
+  -webkit-box-shadow: 0px 1px 2px 0px #8a8a8a, inset 0px 0px 3px 0px #fafcff;
+  -o-box-shadow: 0px 1px 2px 0px #8a8a8a, inset 0px 0px 3px 0px #fafcff;
+  box-shadow: 0px 1px 2px 0px #8a8a8a, inset 0px 0px 3px 0px #fafcff;
+  position: absolute;
+  top: 908px;
+  left: 506px;
+  border-radius: 25px / 25px;
+}
+.text-8 {
+  color: #333333;
+  font-family:"lobster";
+  font-size: 20pt;
+  font-weight: normal;
+  font-style: normal;
+  text-align: center;
+  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.7);
+  line-height: 50px;
+  ;
+}
+.textarea-10 {
+  color: #4f4f4f;
+  font-family:"helvetica neue";
+  font-size: 12pt;
+  font-weight: 300;
+  font-style: normal;
+  text-align: left;
+  line-height: 1.6;
+  width: 419px;
+  position: absolute;
+  top: 973px;
+  left: 51px;
+  margin: 0;
+}
+.rectangle-9 {
+  background: #f1f3f5;
+  border: 1px solid #dfe1e3;
+  width: 970px;
+  height: 199px;
+  border-radius: 0px;
+  -moz-box-shadow: inset 0px 1px 1px 0px rgba(255, 255, 255, 0.7);
+  -webkit-box-shadow: inset 0px 1px 1px 0px rgba(255, 255, 255, 0.7);
+  -o-box-shadow: inset 0px 1px 1px 0px rgba(255, 255, 255, 0.7);
+  box-shadow: inset 0px 1px 1px 0px rgba(255, 255, 255, 0.7);
+  position: absolute;
+  top: 1147px;
+  left: -9px;
+}
+.textarea-11 {
+  color: #262626;
+  font-family:"helvetica neue";
+  font-size: 13pt;
+  font-weight: 300;
+  font-style: normal;
+  text-align: left;
+  line-height: 1.6;
+  width: 620px;
+  margin: 36px 0 0 176px;
+}
+.rectangle-10 {
+  background: #262a30;
+  border: 1px solid #282829;
+  width: 970px;
+  height: 150px;
+  border-radius: 0px;
+  -moz-box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.7);
+  -o-box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.7);
+  box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 1344px;
+  left: -9px;
+}
+.text-9 {
+  color: #ffffff;
+  font-family:"lobster";
+  font-size: 14pt;
+  font-weight: normal;
+  font-style: normal;
+  text-align: center;
+  text-shadow: 0px 1px 1px #000000;
+  line-height: 150px;
+  ;
+}
+.textarea-12 {
+  color: #4f4f4f;
+  font-family:"helvetica neue";
+  font-size: 12pt;
+  font-weight: 300;
+  font-style: normal;
+  text-align: left;
+  line-height: 1.6;
+  width: 460px;
+  position: absolute;
+  top: 1633px;
+  left: 10px;
+  margin: 0;
+}
+.textarea-13 {
+  color: #4f4f4f;
+  font-family:"helvetica neue";
+  font-size: 12pt;
+  font-weight: 300;
+  font-style: normal;
+  text-align: left;
+  line-height: 1.6;
+  width: 460px;
+  position: absolute;
+  top: 1940px;
+  left: 50px;
+  margin: 0;
+}

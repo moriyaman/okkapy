@@ -4,6 +4,9 @@ class UserLike < ActiveRecord::Base
   attr_accessible :user_id, :name, :category, :category_id
 
   validates :user_id, :uniqueness =>{:scope => :category_id}
+  
+  belongs_to :user
+
   class << self
  
     def get_user_likes(user)

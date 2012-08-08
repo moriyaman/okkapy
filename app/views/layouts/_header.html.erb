@@ -1,0 +1,29 @@
+<a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse">
+  <span class="icon-bar"></span>
+  <span class="icon-bar"></span>
+  <span class="icon-bar"></span>
+</a>
+<a class="brand" href="#">Okkapy</a>
+<div class="container nav-collapse">
+  <ul class="nav">
+    <li><%= link_to "商品を選ぶ", "/path1"  %></li>
+    <li><%= link_to "商品をあげる", "/path2"  %></li>
+    <li><%= link_to "Link3", "/path3"  %></li>
+  </ul>
+  <% if current_user %>
+    <ul class="nav pull-right">
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+          <img src=<%=current_user.image_url %> width="20" height="20" alt="" />
+          <%= current_user.last_name %><%= current_user.first_name %>
+          <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li>Setting</li>
+          <li class="divider"></li>
+          <li>Logout</li>
+        </ul>
+      </li>
+    </ul>
+  <% end %>
+</div><!--/.nav-collapse -->

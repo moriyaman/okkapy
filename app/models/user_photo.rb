@@ -3,6 +3,7 @@ require 'json/pure'
 class UserPhoto < ActiveRecord::Base
   attr_accessible :user_id, :height, :width, :image_url
 
+  belongs_to :user
   validates :user_id, :uniqueness =>{:scope => :image_url}
   class << self
  

@@ -1,6 +1,9 @@
 class User < ActiveRecord::Base
   
   has_many :user_friends
+  has_many :user_likes
+  has_many :user_photos
+  has_many :user_interests
  
   def self.create_account(auth)
     user = User.new
@@ -10,7 +13,14 @@ class User < ActiveRecord::Base
     user.access_token = auth['credentials']['token']
     user.uid = auth['uid']
     user.image_url = auth['info']['image']
-    user.save!
+    user.save
+
+   #ユーザ情報
+    #UserPhoto.get_user_photo(user)
+    #UserInterest.get_user_interest(user)
+    #UserLike.get_user_likes(user)    
+    #UserFriend.get_user_friend_date(user)    
+
   end
 
   def test_test

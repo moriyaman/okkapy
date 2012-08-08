@@ -1,7 +1,10 @@
 require 'open-uri'
 require 'json/pure'
 class UserInterest < ActiveRecord::Base
+  
   attr_accessible :user_id, :name, :category, :category_id
+  
+  belongs_to :user
 
   validates :user_id, :uniqueness =>{:scope => :category_id}
   class << self
