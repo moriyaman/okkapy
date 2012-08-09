@@ -2,8 +2,27 @@
 <html lang="en">  
   <body>
     <div id="page-wrapper">
-      <p class="textarea"></p>
+      <h1>商品一覧画面です。</h1>
+        <%Item.all.each do |item|%>
+            <div class="well item_list">
+              <%=link_to image_tag('/image.png',options = {:style => "width:100px;"}), :controller=>"item", :action=>"detail", :id=>item.id %>
+              <span class="help-block">商品名：<%= item.name %></span>
+              <span class="help-block"><%= item.price %>円</span>
+            </div>
+        <% end %>
       <% if current_user %>
+      <% else %>
+        <div class="text-1">First, Let's registration!</div>
+        <div class="rectangle-1">
+          <a class="auth facebook" href="/auth/facebook"><div class="text-2">Facebook registration</div></a>
+        </div>
+      <% end %>
+    </div>
+  </body>
+
+</html>
+
+<% if false %>
         <div class="text-3">okkapy</div>
           <div class="rectangle-2">
             <div class="oval-1">
@@ -26,12 +45,4 @@
       <p class="textarea-13">Easel's goal is allowing you to get your ideas out as quickly as possible. Maybe
         you want to create a beautiful button?</p>
     </div>
-      <% else %>
-        <div class="text-1">First, Let's registration!</div>
-        <div class="rectangle-1">
-          <a class="auth facebook" href="/auth/facebook"><div class="text-2">Facebook registration</div></a>
-        </div>
-      <% end %>
-  </body>
-
-</html>
+<% end %>

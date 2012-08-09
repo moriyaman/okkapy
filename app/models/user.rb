@@ -20,7 +20,7 @@ class User < ActiveRecord::Base
     #UserInterest.get_user_interest(user)
     #UserLike.get_user_likes(user)    
     #UserFriend.get_user_friend_date(user)    
-
+    return user
   end
 
   def test_test
