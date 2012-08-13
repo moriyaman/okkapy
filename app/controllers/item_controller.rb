@@ -8,4 +8,8 @@ class ItemController < ApplicationController
     @item = Item.find(params[:id])
   end
 
+  def preview
+    @item = Item.find(params[:id])
+  end
+
 end

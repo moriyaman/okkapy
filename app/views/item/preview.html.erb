@@ -1,0 +1,7 @@
+プレビュー画面
+<%=@item.inspect%>
+
+<%current_user.user_friends.each do |f|%>
+  <img src="<%=fb_image_url(f.friend_uid)%>" />
+<% end %>
+
