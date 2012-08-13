@@ -1,0 +1,46 @@
+<div class="">
+  <div class="purchase_process back">
+    <div id="purchase_step" style="padding: 20px;"> 
+      <p class="purchase_process_font">①お買い物カート</p>
+      <p class="purchase_process_font">></p>
+      <p class="purchase_process_font">②配送情報</p>
+      <p class="purchase_process_font">></p>
+      <p class="purchase_process_font" style="color:#CD5C5C;">③注文する</p>
+      <p class="purchase_process_font">></p>
+      <p class="purchase_process_font">④完了</p>
+    </div>
+  </div>
+  <div class="left_box" style="margin-top: 30px;">
+    <p style="font-size: 18px; font-weight:bold; ">ご注文</p>
+    <div class="count_product">
+      <hr size="1" color="#999999" style="border-style:dotted" width="140"> 
+      <p>合計</p>
+      <hr size="1" color="#999999" style="border-style:dotted" width="140">
+      <p>配送料</p>
+      <hr size="1" color="#999999" style="border-style:dotted" width="140">
+      <p>手数料</p>
+      <hr size="1" color="#999999" width="140">
+    </div> 
+  </div>
+  <div class="right_box" style="margin-top: 30px;">
+    <div class="">
+      <h2>確認</h2>
+    </div>
+    <p class="label">氏名</p>
+    <p class="user_data"><%=@user.last_name %></p>
+    <p class="label">名前</p>
+    <p class="user_data"><%=@user.first_name %></p>
+    <p class="label">郵便番号</p>
+    <p class="user_data">〒<%=@user.post_code %></p>
+    <p class="label">住所</p>
+    <p class="user_data"><%=@user.address %></p>
+    <p class="label">電話番号</p>
+    <p class="user_data"><%=@user.phone %></p>
+  </div>
+  
+  <div class="">
+   Paypalで今すぐ支払う!
+   <button class="btn btn-danger">支払う</button>
+  </div>
+</div>
+

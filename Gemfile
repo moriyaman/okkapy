@@ -44,3 +44,5 @@ gem 'jquery-rails'
 gem "twitter-bootstrap-rails"
 gem 'omniauth'
 gem 'omniauth-facebook', '1.4.0'
+
+gem 'active_paypal_adaptive_payment'

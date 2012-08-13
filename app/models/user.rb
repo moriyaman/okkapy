@@ -8,8 +8,8 @@ class User < ActiveRecord::Base
   def self.create_account(auth)
     user = User.new
     user.last_name = auth['info']['last_name']
-    user.first_name = auth['info']['first_name']
-   # user.email = auth['info']['email']  
+    user.first_name = auth['info']['first_name'] if auth['info']['first_name']
+    user.mail = auth['info']['email'] if auth['info']['email']
     user.access_token = auth['credentials']['token']
     user.uid = auth['uid']
     user.image_url = auth['info']['image']

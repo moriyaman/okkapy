@@ -1,3 +1,70 @@
 // Place all the styles related to the purchase controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.back{
+  background: #FFFAFA;
+}
+
+.purchase_process{
+  width: 1000px; 
+  height:62px; 
+}
+
+.purchase_process_font{
+  font-size: 24px;
+  display:inline;
+  padding: 20px;
+  color: #DCDCDC;
+}
+
+.info_char{
+  font-size: 14px;
+  display:inline;
+  color: #DCDCDC;
+}
+
+.product_image{
+  margin: 10px;
+  float: left;
+
+}
+
+.product_info{
+  margin-left: 10px;
+}
+
+.count_product{
+  margin: 20px 0 0 20px;
+}
+
+.form_label{
+  font-size: 20px;
+  color: #808080;
+}
+
+.label{
+  font-size: 14px;
+  color: white;
+  padding: 7px;
+}
+
+.user_data{
+  font-size: 14px;
+  font-weight: bold;
+  color: #696969;
+  padding: 7px;
+}
+
+.right_box{
+  width: 500px;
+  margin-left: 520px;
+}
+
+.left_box{
+  float: left;
+  width: 45%;
+  height:300px;
+  background: #FFFAFA;
+}
+

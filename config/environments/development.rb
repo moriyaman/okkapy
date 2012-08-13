@@ -34,4 +34,13 @@ Okkapy::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  config.after_initialize do
+    ActiveMerchant::Billing::Base.mode = :test
+    ::EXPRESS_GATEWAY = ActiveMerchant::Billing::PaypalExpressGateway.new(
+      :login => "XXX_XXXXXXX_XXX_XXXX.XXXXX.XXX",
+      :password => "XXXXXXX",
+      :signature => "XXXX-XXXXXXX.XXXXXXXXXXXXXXXXXXXX-XXXXXX"
+    )
+  end
 end

@@ -1,0 +1,27 @@
+<div id="purchase_content">
+  <div id="purchase_process" style="width: 100%; height:62px; background: #FFFAFA;">
+    <div id="purchase_step" style="padding: 20px;"> 
+      <p class="purchase_process_font">①お買い物カート</p>
+      <p class="purchase_process_font">></p>
+      <p class="purchase_process_font" style="color:#CD5C5C;">②配送情報</p>
+      <p class="purchase_process_font">></p>
+      <p class="purchase_process_font">③注文する</p>
+      <p class="purchase_process_font">></p>
+      <p class="purchase_process_font">④完了</p>
+    </div>
+  </div>
+  <div id="user_form" class="back" style="margin-top: 30px;">
+  <%= form_for @user, :url => { :action => "finish" } do |f| %>
+    <p class="form_label">氏名</p> 
+    <%= f.text_field :last_name %>
+    <p class="form_label">名前</p>
+    <%= f.text_field :first_name %>
+    <p class="form_label">郵便番号</p>
+    <%= f.text_field :post_code %>
+    <p class="form_label">お届け先</p>
+    <%= f.text_field :address %>
+    <p class="form_label">電話番号</p>
+    <%= f.text_field :phone %>
+    <input class="btn btn-danger" name="commit" type="submit" value="登録"> 
+  <% end %>
+</div>
