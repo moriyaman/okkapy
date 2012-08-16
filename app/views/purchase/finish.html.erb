@@ -14,7 +14,7 @@
     <p style="font-size: 18px; font-weight:bold; ">ご注文</p>
     <div class="count_product">
       <hr size="1" color="#999999" style="border-style:dotted" width="140"> 
-      <p>合計</p>
+      <p style="display:inline">合計</p><%=@purchase.price%>円
       <hr size="1" color="#999999" style="border-style:dotted" width="140">
       <p>配送料</p>
       <hr size="1" color="#999999" style="border-style:dotted" width="140">
@@ -40,7 +40,7 @@
   
   <div class="">
    Paypalで今すぐ支払う!
-   <button class="btn btn-danger">支払う</button>
+   <%=link_to "支払う", :controller => 'order', :action => 'new'%>
   </div>
 </div>
 

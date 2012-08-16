@@ -38,9 +38,9 @@ Okkapy::Application.configure do
   config.after_initialize do
     ActiveMerchant::Billing::Base.mode = :test
     ::EXPRESS_GATEWAY = ActiveMerchant::Billing::PaypalExpressGateway.new(
-      :login => "XXX_XXXXXXX_XXX_XXXX.XXXXX.XXX",
-      :password => "XXXXXXX",
-      :signature => "XXXX-XXXXXXX.XXXXXXXXXXXXXXXXXXXX-XXXXXX"
+      :login => "yamada_1344878303_biz_api1.gmail.com",
+      :password => "1344878321",
+      :signature => "An5ns1Kso7MWUdW4ErQKJJJ4qi4-AyMHE4QUG7bQN8X.jabltxnpg8u-"
     )
   end
 end
