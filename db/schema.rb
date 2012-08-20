@@ -21,6 +21,16 @@ ActiveRecord::Schema.define(:version => 20120816144911) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "orders", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "price"
+    t.string   "express_token"
+    t.string   "express_payer_id"
+    t.integer  "purchase_id"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+  end
+
   create_table "purchases", :force => true do |t|
     t.integer  "user_id"
     t.integer  "item_id"

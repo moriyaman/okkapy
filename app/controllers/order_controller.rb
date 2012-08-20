@@ -1,16 +1,17 @@
 class OrderController < ApplicationController
 
  def new
+    @purchase = Purchase.find(params[:id]) 
     response = EXPRESS_GATEWAY.setup_purchase(1000,
-      :name              => "Tickets",
-      :quantity          => 20,
+      :name              => "product",
+      :quantity          => @purchase.product_count,
       :description       => "Sample",
-      :amount            => 300,
+      :amount            => @purchase.price,
+      :currency_code     => "JPY",
       :ip                => request.remote_ip,
       :return_url        => url_for(:action => 'callback', :only_path => false),
       :cancel_return_url => url_for(:action => 'index', :only_path => false)
     )
-    p response
     redirect_to EXPRESS_GATEWAY.redirect_url_for(response.token)
   end
 
