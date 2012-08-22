@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120808161222) do
+ActiveRecord::Schema.define(:version => 20120821000217) do
 
   create_table "items", :force => true do |t|
     t.string   "name"
@@ -19,17 +19,23 @@ ActiveRecord::Schema.define(:version => 20120808161222) do
     t.string   "photo"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.integer  "category"
+  end
+
+  create_table "orders", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "user_friends", :force => true do |t|
     t.integer  "user_id"
     t.string   "friend_name"
-    t.integer  "friend_uid"
+    t.integer  "friend_uid",      :limit => 8
     t.integer  "friend_id"
     t.date     "friend_birthday"
     t.string   "friend_picture"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
+    t.datetime "created_at",                   :null => false
+    t.datetime "updated_at",                   :null => false
   end
 
   create_table "user_interests", :force => true do |t|
@@ -63,14 +69,12 @@ ActiveRecord::Schema.define(:version => 20120808161222) do
     t.string   "mail"
     t.string   "last_name"
     t.string   "first_name"
-    t.string   "address"
-    t.string   "phone"
-    t.string   "post_code"
     t.integer  "uid",          :limit => 8
     t.string   "image_url"
     t.string   "access_token"
     t.datetime "created_at",                :null => false
     t.datetime "updated_at",                :null => false
+    t.string   "birthday"
   end
 
 end
