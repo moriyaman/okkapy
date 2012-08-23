@@ -1,0 +1,9 @@
+#card {list-style:none;}
+#card li {float:left;}
+.fb_img {position:fixed;}
+#img1 {left:250px;top:170px;}
+#img2 {left:470px;top:130px;}
+#img3 {left:470px;top:210px;}
+#img4 {left:690px;top:100px;}
+#img5 {left:690px;top:170px;}
+#img6 {left:690px;top:240px;}
