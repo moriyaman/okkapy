@@ -11,11 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-<<<<<<< HEAD
 ActiveRecord::Schema.define(:version => 20120821000217) do
-=======
-ActiveRecord::Schema.define(:version => 20120816144911) do
->>>>>>> 9dcd3579c9e57a3405d46ee8030b11079549902d
 
   create_table "items", :force => true do |t|
     t.string   "name"
@@ -29,16 +25,6 @@ ActiveRecord::Schema.define(:version => 20120816144911) do
   create_table "orders", :force => true do |t|
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
-  end
-
-  create_table "orders", :force => true do |t|
-    t.integer  "user_id"
-    t.string   "price"
-    t.string   "express_token"
-    t.string   "express_payer_id"
-    t.integer  "purchase_id"
-    t.datetime "created_at",       :null => false
-    t.datetime "updated_at",       :null => false
   end
 
   create_table "purchases", :force => true do |t|
