@@ -1,21 +1,24 @@
 <div id="page_content">
-  <div class="item_zone_top">
+  <div class="item_zone_top label1">
     <div class="time">
       <h3>残り時間: 22時間56分38秒</h3>
     </div> 
     <h3>Item Information</h3>
   </div>
-  <div id="item_zone">
-    <div id="item_image">
+  <div class="item_zone">
+    <div class="item_image">
       <img src='/image.png' width="300" height="300">
     </div>
-    <div id="item_information">
-      <h1 style="font-size: 55px;"><%= @item.name %></h1>
+    <div class="item_information">
+      <h1 id="item_name" style="font-size: 55px;"><%= @item.name %></h1>
       <div class="item_detail">
-        <p style="margin-top: 60px;">こちらはかの有名な森山さんによって作られた腕時計</p>
+        <p>こちらはかの有名な森山さんによって作られた腕時計
+          Leather Druidは、ウクライナ在住のデザイナーAlexander A.氏のデザインスタジオ。長年愛用できるオリジナル手帳や革ケースを作り続けています。Alexander は、最愛の妻と2人の子供の4          人暮らし。一家の主として、職人として、家族と最高の人生を過ごすためにはどうしたらいいかと考え、大好きな革製品作りを選びました。そんなAlexanderの手から生み出される革製品はす          べて100%天然素材というこだわり。部分的に使用している木にいたってはわざわざ倒木を再利用しているという徹底ぶり。手帳自体もAlexanderによる手作り。「自然と共に歩む」というスタ          ンスから生み出されるAlexanderの作品からは、ロマンスさえ感じます。</p>
       </div>
-      <button id="in_cart" class="btn btn-primary">カートに入れる</button>
-      <a href="/item/preview/<%=@item.id%>"<button id="previewButton" class="btn btn-info">プレビュー</button></a>
+      <button id="in_cart" class="btn btn-primary btn_cart" style="margin-left: 80px;">カートに入れる</button>
+      <a href="/item/preview/<%=@item.id%>"><button id="previewButton" class="btn btn-info btn_cart">プレビュー</button></a>
+      <input type="hidden" id="item_price_per" value="<%=@item.price %>"> 
+      <input type="hidden" id="item_id" value="<%=@item.id%>">
     </div>
   </div>
 </div>
@@ -28,12 +31,14 @@
     <div>
       <ul style="list-style:none; margin-left: 60px;">
         <li style="float:left;"><%= @item.name %></li>
-        <li style="float:left; margin-left: 30px;">￥<%= @item.price %>円</li>
+        <li style="float:left; margin-left: 30px;">￥<span id="item_price"><%= @item.price %></span>円</li>
       </ul>
+      <span id="item_count"></span>個
     </div>
   </div>
-  <hr style="margin-top: 90px;">
-  <a href="/purchase/index/<%=@item.id%>"><button class="btn btn-danger" style="margin-left: 140px; ">レジに進む</button></a>
+  <hr style="margin-top: 90px;"> 
+  <a href="javascript:void(0)" id="continue_shopping">< 買い物を続ける</a>
+  <a href="/purchase/index/<%=@item.id%>"><button class="btn btn-danger" style="margin-left: 140px;">レジに進む</button></a>
 </div>
 
 <div id="cart"></div>

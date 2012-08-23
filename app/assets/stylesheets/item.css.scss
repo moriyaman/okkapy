@@ -5,20 +5,54 @@
 #page_content{
   margin: 10px 0 0 0;
 }
-#item_image{
-  float: left;
+.item_information{
+  margin-left: 420px;
+  padding-top:40px;
 }
-#item_information{
-  margin-left: 500px;
-}
-#item_zone{
+.item_zone{
   margin-top:40px;
+  width: 1000px;
+  height: 500px;
+  background: white;
+}
+.item_image{
+  float: left;
+  padding:30px;
 }
 
 .confirm_box{
    width: 400px;
    height:150px;
-   background:#FFFAFA;
+   background: whitesmoke;
    float:right; 
    display:none;
+   position: fixed;
+   top:40px;
+   left: 924px;
 }
+
+.item_zone_top{
+  background: white;
+  padding: 10px 5px;
+}
+
+.time{
+  float: right;
+}
+
+.item_detail{
+  margin-right: 28px;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEIAAABmAQMAAABFp9WLAAAABlBMVEUAAAAAAAClZ7nPAAAAAnRSTlMAGovxNEIAAAAiSURBVCjPY1CZ5AlGDgyeUGYDA1TIk4FhVHZUdlR2mMoCAPsCKIAxWJT1AAAAAElFTkSuQmCC) repeat scroll 0 0 transparent;
+  }
+
+.item_detail p {
+  margin-top: 60px;
+  padding: 30px;
+}
+
+.btn_cart {
+ padding: 10px 40px;
+ width: 200px;
+}
+
+

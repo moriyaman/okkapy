@@ -9,15 +9,18 @@ class OrderController < ApplicationController
       :amount            => @purchase.price,
       :currency_code     => "JPY",
       :ip                => request.remote_ip,
-      :return_url        => url_for(:action => 'callback', :only_path => false),
+      :return_url        => url_for(:action => 'callback', :only_path => false, :purchase=>@purchase.id),
       :cancel_return_url => url_for(:action => 'index', :only_path => false)
     )
     redirect_to EXPRESS_GATEWAY.redirect_url_for(response.token)
   end
 
   def callback
-    @order = Order.new
-    @order.express_token = params[:token]
+    purchase = Purchase.find(params[:purchase])
+    @order = Order.new({:user_id => purchase.user_id,
+                        :purchase_id => params[:purchase],
+                        :price => purchase.price,
+                        :express_token => params[:token]})
   end
 
   def create

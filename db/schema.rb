@@ -15,10 +15,11 @@ ActiveRecord::Schema.define(:version => 20120816144911) do
 
   create_table "items", :force => true do |t|
     t.string   "name"
+    t.string   "detail"
     t.integer  "price"
-    t.string   "photo"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.string   "item_image_uid"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
   end
 
   create_table "orders", :force => true do |t|

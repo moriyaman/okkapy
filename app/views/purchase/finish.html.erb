@@ -10,7 +10,7 @@
       <p class="purchase_process_font">④完了</p>
     </div>
   </div>
-  <div class="left_box" style="margin-top: 30px;">
+  <div class="left_box back" style="margin-top: 30px;">
     <p style="font-size: 18px; font-weight:bold; ">ご注文</p>
     <div class="count_product">
       <hr size="1" color="#999999" style="border-style:dotted" width="140"> 
@@ -22,7 +22,7 @@
       <hr size="1" color="#999999" width="140">
     </div> 
   </div>
-  <div class="right_box" style="margin-top: 30px;">
+  <div class="right_box back" style="margin-top: 30px;">
     <div class="">
       <h2>確認</h2>
     </div>
@@ -38,9 +38,8 @@
     <p class="user_data"><%=@user.phone %></p>
   </div>
   
-  <div class="">
-   Paypalで今すぐ支払う!
-   <%=link_to "支払う", :controller => 'order', :action => 'new', :id => @purchase.id%>
+  <div class="label">
+   <a href="/order/new/<%=@purchase.id%>"><button class="btn btn-danger">Paypalで今すぐ支払う!</button></a>
   </div>
 </div>
 

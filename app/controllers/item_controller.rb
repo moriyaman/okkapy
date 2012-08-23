@@ -11,5 +11,4 @@ class ItemController < ApplicationController
   def preview
     @item = Item.find(params[:id])
   end
-
 end

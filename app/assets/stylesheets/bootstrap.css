@@ -138,7 +138,7 @@ body {
   font-size: 15px;
   line-height: 20px;
   color: #555555;
-  background-color: #f7f7f7;
+  background-image: url('/369.jpeg');
 }
 a {
   color: #da370f;
@@ -168,6 +168,10 @@ a:hover {
 .navbar-fixed-top .container,
 .navbar-fixed-bottom .container {
   width: 940px;
+}
+
+.span13{
+  width: 1000px;
 }
 .span12 {
   width: 940px;
