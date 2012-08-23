@@ -1,0 +1,8 @@
+<%= form_for @order, :url => { :action => "create" }  do |f| %>
+  <%= f.hidden_field :express_token %>
+  <table>
+    <tr><th>name</th><td><%=@order.first_name %> <%=h @order.last_name %></td></tr>
+    <tr><th>order</th><td>$<%= f.text_field :price%></td></tr>
+  </table>
+  <%= f.submit "支払う！" %>
+<% end %>

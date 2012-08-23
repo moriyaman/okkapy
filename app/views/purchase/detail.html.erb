@@ -11,7 +11,7 @@
     </div>
   </div>
   <div id="user_form" class="back" style="margin-top: 30px;">
-  <%= form_for @user, :url => { :action => "finish" } do |f| %>
+  <%= form_for @user, :url => { :action => "finish", :purchase_id => @purchase.id } do |f| %>
     <p class="form_label">氏名</p> 
     <%= f.text_field :last_name %>
     <p class="form_label">名前</p>

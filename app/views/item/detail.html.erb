@@ -1,22 +1,39 @@
 <div id="page_content">
-  <h3>Item Information</h3>
+  <div class="item_zone_top">
+    <div class="time">
+      <h3>残り時間: 22時間56分38秒</h3>
+    </div> 
+    <h3>Item Information</h3>
+  </div>
   <div id="item_zone">
     <div id="item_image">
       <img src='/image.png' width="300" height="300">
     </div>
     <div id="item_information">
-      <h3>あなたにぴったりのアクセサリー</h3>
-      <h3>590円</h3>
-      <h3>残り時間: 22時間56分38秒</h3>
+      <h1 style="font-size: 55px;"><%= @item.name %></h1>
+      <div class="item_detail">
+        <p style="margin-top: 60px;">こちらはかの有名な森山さんによって作られた腕時計</p>
+      </div>
       <button id="in_cart" class="btn btn-primary">カートに入れる</button>
       <a href="/item/<%=item_type(@item)%>"><button id="previewButton" class="btn btn-info">プレビュー</button></a>
     </div>
   </div>
 </div>
 
-<div id="confirm_box" style="width: 200px; height:200px; background:#FFFAFA; float:right; display:none;">
-  <p>これでいいの？</p>
-  <a href="/purchase/index"><button class="btn btn-danger">レジに進む</button></a>
+<div id="confirm_box" class="confirm_box">
+  <div class="cart_item" style="margin-left: 40px;">
+    <div style="float: left;">
+      <img src='/image.png' width="50" height="50">
+    </div>
+    <div>
+      <ul style="list-style:none; margin-left: 60px;">
+        <li style="float:left;"><%= @item.name %></li>
+        <li style="float:left; margin-left: 30px;">￥<%= @item.price %>円</li>
+      </ul>
+    </div>
+  </div>
+  <hr style="margin-top: 90px;">
+  <a href="/purchase/index/<%=@item.id%>"><button class="btn btn-danger" style="margin-left: 140px; ">レジに進む</button></a>
 </div>
 
 <div id="cart"></div>

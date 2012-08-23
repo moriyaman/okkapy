@@ -10,35 +10,47 @@
       <p class="purchase_process_font">④完了</p>
     </div>
   </div>
-  <div id="purchase_product" class="back" style="width: 100%; height:200px; margin: 30px 0 0 0;">
+  <div id="purchase_product" class="back" style="width: 100%; height:170px; margin: 30px 0 0 0;">
     <div class="product_image" style="margin: 10px;">
       <img src="/image.png" width="150">
     </div>
     <div class="product_info">
-      <h3>Product name</h3>
+      <h3 style="display: inline;">Product name</h3>
+      <p style="margin-left: 30px; display: inline;"><%=@item.name %></p>
       <hr width="140">
-      <p class="info_char" style="color:black;">出荷所要日数</p>
+      <p class="info_char" style="color:black; display: inline;">出荷所要日数</p>
+      <p class="info_char" style="color:black; display: inline; margin-left: 30px;">お支払いより15日以内</P>
       <hr width="140">
-      <p class="info_char" style="color:black;">お支払いより15日以内</P>
-      <hr width="140">
+      <input id="per_price" type="hidden" value="<%=@item.price %>">
     </div>
+    数量
+    <select id="select_product_count" name="example" style="width:60px;">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
   </div>
-  <div id="split_content">
-    <div id="spacial" class="left_box" style="margin: 30px 0 0 0;">
-    現在使えるspecialはないよん 
-    </div>
-    <div id="purchase_confirm" style="width: 50%; height:300px; background: #FFFAFA; margin: 30px 0 0 40px; float: left;">
+  <div class="product_info">
+    <div id="purchase_confirm" style="width: 100%; height:300px; background: #FFFAFA; margin-top: 30px;">
       <p style="font-size: 18px; font-weight:bold; ">ご注文</p>
       <div class="count_product">
         <hr size="1" color="#999999" style="border-style:dotted" width="140"> 
-        <p style="display: inline;">合計</p><p style="display: inline;"><%= @item.price %>円</p>
+        <p style="display: inline;">合計</p><p id="product_price" name="purchase[price]" style="display: inline;"><%= @item.price %>円</p>
         <hr size="1" color="#999999" style="border-style:dotted" width="140">
         <p style="display: inline;">配送料</p><p style="display: inline;">200円</p>
         <hr size="1" color="#999999" style="border-style:dotted" width="140">
         <p style="display: inline;">手数料</p><p style="display: inline;">0円</p>
         <hr size="1" color="#999999" width="140">
       </div> 
-       <a href="/purchase/detail"><button id="continue" class="btn btn-danger btn-large">注文する</button></a>
+      <%= form_for @purchase, :url=>{:action => 'detail'} do |f| %> 
+        <input type="hidden" name="purchase[user_id]" value="<%=@user.id%>">
+        <input type="hidden" name="purchase[item_id]" value="<%=@item.id%>">
+        <input id="price" type="hidden" name="purchase[price]" value="<%=@item.price%>">
+        <input id="count" type="hidden" name="purchase[product_count]" value="1">
+        <input id="continue" type="submit" class="btn btn-danger btn-large" value="注文する">
+      <% end %>
     </div>
   </div>
 </div>
