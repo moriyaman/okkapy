@@ -2,7 +2,9 @@ require 'open-uri'
 require 'json/pure'
 class UserFriend < ActiveRecord::Base 
   attr_accessible :user_id, :friend_name, :friend_uid, :friend_id, :friend_birthday ,:friend_picture
-  
+
+  validates :user_id, :uniqueness => {:scope => [:friend_uid, :friend_id]} 
+ 
   belongs_to :user
   
   class << self

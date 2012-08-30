@@ -44,7 +44,7 @@
     <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
-        <%= render :partial => "/layouts/header"%>
+          <%= render :partial => "/layouts/header"%>
         </div>
       </div>
     </div>
@@ -54,7 +54,7 @@
         <div class="row">
            <div class="span13">
               <%= yield %>
-            </div>
+           </div>
         </div><!--/row-->
       </div><!--/content-->
 
@@ -63,6 +63,8 @@
       </footer>
 
     </div> <!-- /container -->
+
+    <%= render :partial => "/layouts/modal_cart"%>
 
     <!-- Javascripts
     ================================================== -->

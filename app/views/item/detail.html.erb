@@ -17,29 +17,10 @@
       </div>
       <button id="in_cart" class="btn btn-primary btn_cart" style="margin-left: 80px;">カートに入れる</button>
       <a href="/item/preview/<%=@item.id%>"><button id="previewButton" class="btn btn-info btn_cart">プレビュー</button></a>
-      <input type="hidden" id="item_price_per" value="<%=@item.price %>"> 
-      <input type="hidden" id="item_id" value="<%=@item.id%>">
     </div>
   </div>
 </div>
-
-<div id="confirm_box" class="confirm_box">
-  <div class="cart_item" style="margin-left: 40px;">
-    <div style="float: left;">
-      <img src='/image.png' width="50" height="50">
-    </div>
-    <div>
-      <ul style="list-style:none; margin-left: 60px;">
-        <li style="float:left;"><%= @item.name %></li>
-        <li style="float:left; margin-left: 30px;">￥<span id="item_price"><%= @item.price %></span>円</li>
-      </ul>
-      <span id="item_count"></span>個
-    </div>
-  </div>
-  <hr style="margin-top: 90px;"> 
-  <a href="javascript:void(0)" id="continue_shopping">< 買い物を続ける</a>
-  <a href="/purchase/index/<%=@item.id%>"><button class="btn btn-danger" style="margin-left: 140px;">レジに進む</button></a>
-</div>
+<div id="confirm_box" class="confirm_box"></div>
 
 <div id="cart"></div>
 

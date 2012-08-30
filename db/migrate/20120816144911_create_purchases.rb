@@ -7,6 +7,7 @@ class CreatePurchases < ActiveRecord::Migration
       t.integer :postage
       t.integer :margin
       t.integer :product_count
+      t.boolean :purchase_flg, :default => false
       t.timestamps
     end
   end
