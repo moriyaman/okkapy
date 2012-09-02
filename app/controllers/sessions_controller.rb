@@ -1,4 +1,3 @@
-
 class SessionsController < ApplicationController
 
   def index
@@ -27,5 +26,4 @@ class SessionsController < ApplicationController
     UserLike.get_user_likes(user)    
     UserFriend.get_user_friend_date(user)
   end
-
 end

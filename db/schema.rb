@@ -16,10 +16,18 @@ ActiveRecord::Schema.define(:version => 20120816144911) do
   create_table "items", :force => true do |t|
     t.string   "name"
     t.string   "detail"
+<<<<<<< HEAD
     t.integer  "price"
     t.string   "item_image_uid"
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false
+=======
+    t.string   "price"
+    t.string   "item_image_uid"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+    t.integer  "category"
+>>>>>>> 45959942a952d9e0c24b7b625f2138d105b13417
   end
 
   create_table "orders", :force => true do |t|
