@@ -12,6 +12,14 @@ class ItemController < ApplicationController
     @item = Item.find(params[:id])
   end
 
+  def new
+    @item = Item.new
+  end
+
+  def create
+    @item = Item.create(params[:item])
+  end
+
   def trump
   end
 

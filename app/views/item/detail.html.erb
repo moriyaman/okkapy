@@ -1,13 +1,13 @@
 <div id="page_content">
   <div class="item_zone_top label1">
     <div class="time">
-      <h3>残り時間: 22時間56分38秒</h3>
+      <h3>残り時間: </h3>
     </div> 
     <h3>Item Information</h3>
   </div>
   <div class="item_zone">
     <div class="item_image">
-      <img src='/image.png' width="300" height="300">
+      <%=image_tag(@item.item_image.url) %>
     </div>
     <div class="item_information">
       <h1 id="item_name" style="font-size: 55px;"><%= @item.name %></h1>

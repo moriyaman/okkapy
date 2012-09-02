@@ -2,19 +2,11 @@
 <html lang="en">  
   <body>
     <div id="page-wrapper">
-      <h1>商品一覧画面です。</h1>
-        <%Item.all.each do |item|%>
-            <div class="well item_list">
-              <%=link_to image_tag('/image.png',options = {:style => "width:100px;"}), :controller=>"item", :action=>"detail", :id=>item.id %>
-              <span class="help-block">商品名：<%= item.name %></span>
-              <span class="help-block"><%= item.price %>円</span>
-            </div>
-        <% end %>
-      <% if current_user %>
-      <% else %>
-        <div class="text-1">First, Let's registration!</div>
-        <div class="rectangle-1">
-          <a class="auth facebook" href="/auth/facebook"><div class="text-2">Facebook registration</div></a>
+      <%Item.all.each do |item|%>
+        <div class="well item_list">
+          <%=link_to image_tag(item.item_image.url), :controller=>"item", :action=>"detail", :id=>item.id %>
+          <span class="help-block">商品名：<%= item.name %></span>
+          <span class="help-block"><%= item.price %>円</span>
         </div>
       <% end %>
     </div>
@@ -22,27 +14,3 @@
 
 </html>
 
-<% if false %>
-        <div class="text-3">okkapy</div>
-          <div class="rectangle-2">
-            <div class="oval-1">
-              <div class="text-4">2</div>
-            </div>
-            <div class="text-5">You can make parsonal product!</div>
-            <p class="textarea-3">Web design is made up of many similar objects. Today’s tools force the designeto copy/paste groups of layers around.
-          <br/>
-          <br/>Easel allows you to create reusable 'elements' by simply grouping with a special
-          command. Then you can change them in one place, and they change everywhere.</p>
-        <p class="textarea-4"></p>
-          <%=link_to image_tag('/image.png'), :controller=>"item", :action=>"detail", :id=>1%>
-          <p class="textarea-5">1. Select both the button body and text
-            <br/>2. Press</p>
-      </div>
-      <p class="textarea-12">Easel makes implementation easier by exporting single elements to HTML/CSS.
-        <br/>
-        <br/>With integrated web fonts and by using the browser’s type engine, text is rendered
-        exactly as it will on your website.  </p>
-      <p class="textarea-13">Easel's goal is allowing you to get your ideas out as quickly as possible. Maybe
-        you want to create a beautiful button?</p>
-    </div>
-<% end %>

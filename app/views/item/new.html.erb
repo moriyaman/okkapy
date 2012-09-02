@@ -1,0 +1,8 @@
+<p>アイテムを登録できます！</p>
+
+<%=form_for(@item, :url=>{:action=>'create'}, :html=>{:multipart=>true}) do |f| %>
+  <%=f.text_field :name %>
+  <%=f.text_field :price %>
+  <%=f.file_field :item_image %>
+  <%= f.submit %>
+<% end %> 

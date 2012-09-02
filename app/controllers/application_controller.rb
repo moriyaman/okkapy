@@ -11,4 +11,10 @@ class ApplicationController < ActionController::Base
   def user_friend_defined
     @user ? @friends = @user.user_friends : @friend=nil
   end
+
+  def check_login?
+    until @user
+      redirect_to :controller=>'top', :action=>'login'
+    end
+  end
 end

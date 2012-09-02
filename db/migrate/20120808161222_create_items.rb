@@ -3,7 +3,7 @@ class CreateItems < ActiveRecord::Migration
     create_table :items do |t|
       t.string :name
       t.string :detail
-      t.integer :price
+      t.string :price
       t.string :item_image_uid
       t.timestamps
     end

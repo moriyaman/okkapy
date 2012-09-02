@@ -16,22 +16,21 @@ ActiveRecord::Schema.define(:version => 20120821000217) do
   create_table "items", :force => true do |t|
     t.string   "name"
     t.string   "detail"
-    t.integer  "price"
-<<<<<<< HEAD
+    t.string   "price"
     t.string   "item_image_uid"
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false
-=======
-    t.string   "photo"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
     t.integer  "category"
->>>>>>> deb303e299dc7b1ceb786ed898c6f418234f2738
   end
 
   create_table "orders", :force => true do |t|
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.integer  "user_id"
+    t.string   "price"
+    t.string   "express_token"
+    t.string   "express_payer_id"
+    t.integer  "purchase_id"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
   end
 
   create_table "purchases", :force => true do |t|
@@ -87,6 +86,9 @@ ActiveRecord::Schema.define(:version => 20120821000217) do
     t.string   "mail"
     t.string   "last_name"
     t.string   "first_name"
+    t.string   "address"
+    t.string   "phone"
+    t.string   "post_code"
     t.integer  "uid",          :limit => 8
     t.string   "image_url"
     t.string   "access_token"
