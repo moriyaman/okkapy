@@ -50,4 +50,4 @@ gem 'omniauth-facebook', '1.4.0'
 gem 'active_paypal_adaptive_payment'
 
 gem 'rack-cache', :require => 'rack/cache'
-gem 'dragonfly', '~>0.9.8'
+gem 'dragonfly', '~>1.4.0'
